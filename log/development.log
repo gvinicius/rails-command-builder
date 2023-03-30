@@ -1,0 +1,116 @@
+Started GET "/" for ::1 at 2023-03-29 20:21:30 -0400
+Processing by PagesController#main as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/main.html.erb within layouts/application
+  Rendered pages/main.html.erb within layouts/application (Duration: 68.6ms | Allocations: 5019)
+  Rendered layout layouts/application.html.erb (Duration: 647.7ms | Allocations: 53330)
+Completed 200 OK in 708ms (Views: 669.5ms | ActiveRecord: 0.0ms | Allocations: 57390)
+
+
+Started POST "/generate" for ::1 at 2023-03-29 20:21:39 -0400
+Processing by PagesController#generate as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "database"=>"oracle", "commit"=>"Generate Command"}
+No template found for PagesController#generate, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms | Allocations: 671)
+
+
+Started GET "/" for ::1 at 2023-03-29 20:59:10 -0400
+  
+AbstractController::ActionNotFound (The action 'main' could not be found for WelcomeController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-29 20:59:51 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 440)
+  Rendered layout layouts/application.html.erb (Duration: 117.9ms | Allocations: 14497)
+Completed 200 OK in 154ms (Views: 131.5ms | ActiveRecord: 0.0ms | Allocations: 18520)
+
+
+Started GET "/?database=postgresql&skip-namespace=true&skip-collision-check=true" for ::1 at 2023-03-29 21:00:05 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"database"=>"postgresql", "skip-namespace"=>"true", "skip-collision-check"=>"true"}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 1319)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 1618)
+
+
+Started GET "/?database=postgresql&skip-namespace=true&skip-collision-check=false" for ::1 at 2023-03-29 21:00:14 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"database"=>"postgresql", "skip-namespace"=>"true", "skip-collision-check"=>"false"}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1143)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 1379)
+
+
+Started GET "/?database=postgresql&skip-namespace=true&skip-collision-check=false" for ::1 at 2023-03-29 21:02:17 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"database"=>"postgresql", "skip-namespace"=>"true", "skip-collision-check"=>"false"}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 106.0ms | Allocations: 14842)
+Completed 200 OK in 138ms (Views: 117.1ms | ActiveRecord: 0.0ms | Allocations: 18865)
+
+

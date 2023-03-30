@@ -1,0 +1,60 @@
+<h1>Welcome to the Rails Command Builder App!</h1>
+
+<p>Select your options:</p>
+
+<form id="command-builder-form">
+  <div>
+    <label for="database">Database:</label>
+    <select id="database" name="database">
+      <option value="mysql">MySQL</option>
+      <option value="postgresql">PostgreSQL</option>
+      <option value="oracle">Oracle</option>
+      <option value="sqlite3" selected>SQLite</option>
+      <option value="sqlserver">SQL Server</option>
+      <option value="jdbcmysql">JDBC MySQL</option>
+      <option value="jdbcpostgresql">JDBC PostgreSQL</option>
+      <option value="jdbcsqlite3">JDBC SQLite</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="skip-namespace">Skip Namespace:</label>
+    <select id="skip-namespace" name="skip-namespace">
+      <option value="true">Yes</option>
+      <option value="false" selected>No</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="skip-collision-check">Skip Collision Check:</label>
+    <select id="skip-collision-check" name="skip-collision-check">
+      <option value="true">Yes</option>
+      <option value="false" selected>No</option>
+    </select>
+  </div>
+
+  <div>
+    <button type="submit">Generate Command</button>
+  </div>
+</form>
+
+<div id="command-preview">
+  <p><strong>Preview:</strong></p>
+  <pre><code id="command-preview-code">rails new --database=sqlite3 --skip-namespace=false --skip-collision-check=false</code></pre>
+</div>
+
+<script>
+  const form = document.querySelector('#command-builder-form');
+  const previewCode = document.querySelector('#command-preview-code');
+
+  const updatePreview = () => {
+    const database = document.querySelector('#database').value;
+    const skipNamespace = document.querySelector('#skip-namespace').value;
+    const skipCollisionCheck = document.querySelector('#skip-collision-check').value;
+    const command = `rails new --database=${database} --skip-namespace=${skipNamespace} --skip-collision-check=${skipCollisionCheck}`;
+    previewCode.textContent = command;
+  };
+
+  form.addEventListener('change', updatePreview);
+  updatePreview();
+</script>
